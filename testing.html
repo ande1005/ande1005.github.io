@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Ryan Andersen - Adaptive Testing</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Ryan Andersen</h1>
+        <p id="short_bio">
+          Senior Ruby on Rails Web Developer<br />
+          Grand Rapids, MI
+        </p>
+        
+        <p class="nav_links"><a href="index.html">About Me</a></p>
+        <p class="nav_links"><a href="projects.html">Sample Projects</a></p>
+      </header>
+      <section>
+        <h1>Adaptive Testing</h1>
+        
+        <ul>
+          <li>Overhauled our testing system so that every question must be tied to a video from the course</li>
+          <li>After completing a test, remediation is shown, which lists all videos that had questions answered incorrectly along with the corresponding question(s)</li>
+          <li>Each video belongs to a video category, which has requirements for number of questions that must be asked as well as number that must be answered correctly</li>
+          <li>Tests have both an overall pass percentage as well as requiring that all video category conditions must be met, so if a student continues to get questions wrong in a certain category, he/she will be asked more until the requirement is fulfilled or passing is impossible</li>
+          <li>Questions are chosen randomly from the pool of possible questions</li>
+          <li>There are a small number of bonus questions that may be asked if a person is within a couple of questions of passing after the minimum number of required questions has been asked (assuming that by answering them correctly, they would achieve the overall pass percent as well as the per-category requirements)</li>
+        </ul>
+        
+        <img src="images/test.png" alt="Proofreading System" title="Test Question">
+        
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+</html>
