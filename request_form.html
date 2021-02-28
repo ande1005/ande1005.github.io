@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Ryan Andersen - FreshStock</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Ryan Andersen</h1>
+        <p id="short_bio">
+          Senior Ruby on Rails Engineer<br />
+          Grand Rapids, MI
+        </p>
+        
+        <p class="nav_links"><a href="index.html">About Me</a></p>
+        <p class="nav_links"><a href="projects.html">Sample Projects</a></p>
+      </header>
+      <section>
+        <h1>Request Form</h1>
+        
+        <p>In July 2018, the Design Pickle request form was a 1-page form with 6 input fields. It was basic, simple, and rigid.</p>
+        
+        <p>There were several big areas of improvement I saw and very quickly made to the form.</p>
+        
+        <ul>
+          <li>All form information was being passed straight through to a 3rd party platform without saving anything in the Design Pickle database. I added the ability to save drafts so a customer could come back and resume a request, and I started auto-saving each and every field in the database with each change that was made to the form.</li>
+          <li>There were a bunch of new fields that we wanted to add to the form, including what type of design you were looking for, adding a company brand profile to a request, including a predefined or custom size for the final deliverable, having separate fields for design requirements vs. actual text on the design, and where to add the request in your queue.</li>
+          <li>Instead of using one big text area to make your request, we added request details, allowing customers to separate each design requirement into its own bullet point. This created a bulleted list for designers that had to be checked off before a design could be delivered, reducing the number of delivered files with details missing.</li>
+          <li>Integrating with IBM Watson to attempt to guess the request type based on the request name.</li>
+          <li>Breaking up the 1-page form into a multi-page step-by-step guide, allowing you to focus on one step at a time with improved instructions and a better experience.</li>
+          <li>Some less helpful legacy fields were removed, but backward compatibility was retained by allowing those fields to be edited if they had previously been entered.</li>
+        </ul>
+        
+        <p>It turned out that allowing editing and auto-saving of drafts had some unforeseen complications. One of these complications was when multiple people shared a login and started modifying the same request at the same time. Once I identified this problem, I chose to simply kick the second editor off of the request as a quick fix to the issue. There was also a problem when detail tasks were added or removed &mdash; generating, saving, and deleting one-to-many associations was not as simple as it seemed with Rails / ajax. Eventually, after troubleshooting multiple scenarios, I was able to resolve that problem as well.</p>
+        
+        <p>Saving all request information was a huge improvement that opened up many future opportunities. Not only did it allow saving drafts and editing them after submission, it also allowed for data analysis and transparency into what customers were requesting / how many of each type of request we were completing, the ability to move off of a 3rd party platform and eventually save nearly $100,000 per year by building it internally, and allowing request details to be turned into a checklist for designers in order to improve design quality and completeness.</p>
+        
+        <p>The technical / structural modifications around the request form was probably the single biggest contribution I made at Design Pickle because of the combination of cost savings, customer experience improvement, and the opportunity for future capabilities.</p>
+        
+        <img src="images/request_form.png" alt="Request Form" title="Request Form">
+        
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+</html>
