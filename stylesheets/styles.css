@@ -204,6 +204,14 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+ol#reforge_list li {
+  font-weight: bold;
+}
+
+ol#reforge_list li ul li {
+  font-weight: normal;
+}
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
